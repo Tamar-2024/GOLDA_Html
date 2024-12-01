@@ -1,0 +1,181 @@
+body {
+    background-color: blanchedalmond;
+    width: 100%;
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-areas:
+        'header'
+        'section'
+        'form'
+        'table1'
+        'picb'
+        'ad'
+        'golda'
+        'footer';
+    width: 100%;
+    margin: 0;
+}
+
+section:nth-of-type(1) {
+    grid-area: section;
+    background-image: url(images/slider3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    width: 100%;
+}
+
+section:nth-of-type(1) h1 {
+    color: white;
+    text-align: center;
+    font-size: 9rem;
+    padding-top: 2%;
+    font-family: 'Teko', sans-serif;
+}
+
+section:nth-of-type(1) h2 {
+    font-family: 'Whisper', cursive;
+    text-align: center;
+    font-size: 35px;
+    margin-top: -10%;
+}
+
+form {
+    grid-area: form;
+    background-color: rgb(5, 58, 40);
+    width: 70%;
+    margin: auto;
+    font-size: 30px;
+    font-family: "Amatic SC";
+    margin-top: 6%;
+    direction: rtl;
+    color: rgb(239, 199, 137);
+    ;
+}
+
+h4 {
+    text-align: center;
+    color: rgb(233, 182, 106);
+}
+
+form div {
+    padding-top: 5%;
+    padding-right: 10%;
+    margin-left: 5%;
+}
+
+form .DivInput input {
+    width: 100%;
+    background-color: rgb(226, 196, 151);
+    border-radius: 10px;
+    height: 30px;
+    font-weight: bold;
+    font-size: medium;
+    margin-top: 20px;
+    font-family: "Amatic SC";
+}
+
+form div select {
+    width: 100%;
+    background-color: rgb(226, 196, 151);
+    border-radius: 10px;
+    height: 30px;
+    font-weight: bold;
+    font-size: medium;
+    font-family: "Amatic SC";
+}
+
+textarea {
+    direction: rtl;
+    font-family: "Amatic SC";
+    width: 100%;
+    background-color: rgb(226, 196, 151);
+    border-radius: 10px;
+    height: 100px;
+}
+
+form .Div {
+    text-align: center;
+}
+
+form .Div input {
+    background-color: rgb(233, 182, 106);
+    border-radius: 15px;
+    height: 50px;
+    width: 70px;
+    color: rgb(5, 58, 40);
+    font-weight: bold;
+    font-size: 30px;
+    font-family: "Amatic SC";
+}
+
+.Div a {
+    color: rgb(233, 182, 106);
+}
+
+p {
+    direction: rtl;
+    font-family: "Amatic SC";
+    padding-right: 10%;
+    color: brown;
+}
+
+table {
+    grid-area: table1;
+    direction: rtl;
+    font-family: "Amatic SC";
+    background-color: rgb(252, 222, 241);
+    font-size: 40px;
+    margin-top: 100px;
+}
+
+td {
+    height: 10vh;
+    border-left: 2px solid black;
+}
+
+#picB {
+    grid-area: picb;
+    background-attachment: scroll;
+    background-image: url(images/way.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    direction: rtl;
+}
+
+#ad {
+    grid-area: ad;
+    text-align: center;
+    font-size: 40px;
+    direction: rtl;
+    font-family: "Amatic SC";
+}
+
+@media(max-width:768px) {
+    table {
+        font-size: 30px;
+    }
+
+    #ad {
+        font-size: 30px;
+    }
+}
+
+@media(max-width:600px) {
+
+    section:nth-of-type(1) h1 {
+        font-size: 6rem;
+    }
+
+    table {
+        font-size: 20px;
+    }
+
+    #ad {
+        font-size: 20px;
+    }
+}

@@ -1,0 +1,251 @@
+body {
+    background-color: rgb(255, 245, 229);
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-areas:
+        'header'
+        'section1'
+        'look'
+        'city'
+        'more'
+        'follow'
+        'golda'
+        'footer';
+    margin: 0;
+}
+
+section {
+    grid-area: section1;
+    background-image: url(images/חנות.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    opacity: 0.8;
+}
+
+section h1 {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: 150px;
+    padding-top: 2%;
+    animation: mymove2 5s;
+}
+
+@keyframes mymove2 {
+    50% {
+        font-size: 10rem;
+    }
+}
+
+section h2 {
+    grid-area: h1;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: 40px;
+    margin-top: -5%;
+    font-family: 'Whisper', cursive;
+    animation: mymove 8s infinite;
+    padding-bottom: 50px;
+}
+
+@keyframes mymove {
+    50% {
+        text-indent: 200px;
+    }
+}
+
+#look {
+    grid-area: look;
+    text-align: center;
+    font-family: "Amatic SC";
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+#look p {
+    text-align: center;
+    font-family: "Amatic SC";
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+#look input {
+    display: block;
+    margin: 0 auto;
+    margin-top: 3%;
+    border-radius: 15px;
+    height: 40px;
+    font-family: "Amatic SC";
+    font-weight: bold;
+    font-size: larger;
+    width: 50%;
+}
+
+.city {
+    grid-area: city;
+    margin-top: 15px;
+    direction: rtl;
+    width: 95%;
+}
+
+.city p {
+
+    height: 70px;
+    padding: 15px;
+    border-bottom: 2px solid;
+    width: 97%;
+    color: rgb(3, 79, 3);
+    font-family: "Amatic SC";
+    font-size: 26px;
+}
+
+.city p span {
+    font-size: 35px;
+    color: darkgoldenrod;
+}
+
+.city div {
+    display: flex;
+    padding: auto;
+    font-weight: bolder;
+}
+
+.city div input {
+    height: 35px;
+    width: 45px;
+    margin: 50px;
+    background-color: white;
+    border-radius: 60px;
+    color: darkgoldenrod;
+    font-size: 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: white;
+}
+
+#more {
+    grid-area: more;
+    margin: auto;
+    margin-bottom: 2%;
+    display: block;
+}
+
+#moreIn {
+    background-color: rgb(5, 36, 24);
+    width: 150px;
+    height: 50px;
+    color: blanchedalmond;
+    font-family: 'cursive';
+    font-weight: bold;
+}
+
+#moreIn:hover {
+    animation: mymove3 3s infinite;
+}
+
+@keyframes mymove3 {
+    50% {
+        background-color: rgba(122, 98, 64, 0.947);
+    }
+}
+
+#follow {
+    grid-area: follow;
+    background-color: rgb(244, 216, 232);
+    height: fit-content;
+}
+
+#follow img {
+    height: 200px;
+    width: 250px;
+    border: 6px solid white;
+    margin-top: 15px;
+    margin-left: 7%;
+    animation: slideImage 18s infinite;
+}
+
+@keyframes slideImage {
+    0% {
+        transform: translateX(-10%);
+    }
+
+    50% {
+        transform: translateX(36%);
+    }
+
+    100% {
+        transform: translateX(-10%);
+    }
+}
+
+#follow p {
+    color: white;
+    margin-top: 0px;
+    text-align: center;
+    font-size: 10rem;
+}
+
+@media(max-width:768px) {
+    section h1 {
+
+        width: 87%;
+        font-size: 6rem;
+        padding-top: 50px;
+        animation: none;
+    }
+
+    section h2 {
+        width: 70%;
+        font-size: 22px;
+    }
+
+    #look {
+        width: 60%;
+        margin: auto;
+        align-items: center;
+    }
+
+    #look input {
+        width: 80%;
+    }
+
+    .city {
+        width: 90%;
+    }
+
+    #more {
+        margin-left: 37%;
+    }
+
+    #follow p {
+        font-size: 50px;
+    }
+
+    #follow img {
+        width: 95px;
+        height: 85px;
+        margin-left: 10%;
+    }
+}
+
+@media(max-width:600px) {
+    section h2 {
+        width: 80%;
+    }
+
+    #look {
+        width: 70%;
+        margin: auto;
+    }
+
+    .city {
+        width: 85%;
+    }
+
+    #follow img {
+        margin-left: 1%;
+    }
+}

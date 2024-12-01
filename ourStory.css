@@ -1,0 +1,186 @@
+body {
+    background-color: rgb(255, 232, 194);
+}
+
+section:nth-of-type(1) {
+    display: grid;
+    background-attachment: scroll;
+    background-image: url(images/סניףף.PNG);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+}
+
+section:nth-of-type(1) h1 {
+    color: white;
+    text-align: center;
+    font-size: 13rem;
+    font-family: 'Bree Serif', serif;
+    font-family: 'Courier Prime', monospace;
+    font-family: 'Hanuman', serif;
+    font-family: 'Sanchez', serif;
+    font-family: 'Varela', sans-serif;
+    font-family: 'Zilla Slab', serif;
+    font-weight: bold;
+    margin-top: 100px;
+}
+
+section:nth-of-type(1) h2 {
+    color: rgb(248, 248, 248);
+    text-align: center;
+    font-family: "Amatic SC";
+    margin-top: -200px;
+    font-size: 40px;
+}
+
+section:nth-of-type(2) h3 {
+    text-align: center;
+    font-size: 30px;
+    color: #113211;
+}
+
+section:nth-of-type(2) h4 {
+    text-align: center;
+    font-size: 70px;
+    color: #113211;
+    margin-top: 2%;
+}
+
+.text {
+    direction: rtl;
+    text-align: center;
+    font-size: 18px;
+    padding-right: 150px;
+    padding-left: 150px;
+    margin-top: -2%;
+    height: fit-content;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#div1 {
+    margin-top: 5%;
+    height: 600px;
+    background-size: 100% 100%;
+    animation: anim1 ease-in-out 30s infinite;
+}
+
+@keyframes anim1 {
+    0% {
+        background-image: url(images/אניטה-נווה-צדק-2002.jpg);
+        height: 700px;
+    }
+
+    25% {
+        background-image: url(images/אניטה-שרונה-1.jpg);
+        height: 700px;
+    }
+
+    33.33% {
+        background-image: url(images/הקמת\ מפעל.PNG);
+        height: 700px;
+    }
+
+    50% {
+        background-image: url(images/גולדה-פרדס-חנה-הסניף-הראשון-1.jpg);
+        height: 700px;
+    }
+
+    66.66% {
+        background-image: url(images/אניטה-אוסטרליה-חדש.jpg);
+        height: 700px;
+    }
+
+    75% {
+        background-image: url(images/אניטה-פתיחה-נייו-יורק-.jpg);
+        height: 700px;
+    }
+
+    100% {
+        background-image: url(images/home.jpg);
+        height: 700px;
+    }
+}
+
+@media(max-width:768px) {
+    section:nth-of-type(1) h1 {
+        font-size: 10rem;
+        margin-top: 100px;
+    }
+
+    section:nth-of-type(1) h2 {
+        font-size: 30px;
+        margin-top: -100px;
+    }
+
+    section:nth-of-type(2) h3 {
+
+        font-size: 30px;
+    }
+
+    section:nth-of-type(2) h4 {
+
+        font-size: 50px;
+    }
+
+    .text {
+
+        padding-right: 100px;
+        padding-left: 100px;
+    }
+}
+
+@media(max-width:600px) {
+    section:nth-of-type(1) h1 {
+
+        font-size: 8rem;
+        margin-top: 200px;
+    }
+
+    section:nth-of-type(1) h2 {
+        font-size: 20px;
+        margin-top: -100px;
+    }
+
+    .text {
+
+        padding-right: 50px;
+        padding-left: 50px;
+    }
+
+    @keyframes anim1 {
+        0% {
+            background-image: url(images/אניטה-נווה-צדק-2002.jpg);
+            height: 400px;
+        }
+
+        25% {
+            background-image: url(images/אניטה-שרונה-1.jpg);
+            height: 400px;
+        }
+
+        33.33% {
+            background-image: url(images/הקמת\ מפעל.PNG);
+            height: 400px;
+        }
+
+        50% {
+            background-image: url(images/גולדה-פרדס-חנה-הסניף-הראשון-1.jpg);
+            height: 400px;
+        }
+
+        66.66% {
+            background-image: url(images/אניטה-אוסטרליה-חדש.jpg);
+            height: 400px;
+        }
+
+        75% {
+            background-image: url(images/אניטה-פתיחה-נייו-יורק-.jpg);
+            height: 400px;
+        }
+
+        100% {
+            background-image: url(images/home.jpg);
+            height: 400px;
+        }
+    }
+}

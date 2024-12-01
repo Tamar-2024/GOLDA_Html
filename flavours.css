@@ -1,0 +1,265 @@
+body {
+    background-color: rgb(255, 232, 194);
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-areas:
+        'header header'
+        'section1 section1'
+        'look look'
+        'flavours flavours'
+        'more more'
+        'gallery picture'
+        'extras yogurts'
+        'golda golda'
+        'footer footer';
+    grid-template-columns: 1fr 1fr;
+}
+
+section:nth-of-type(1) {
+    grid-area: section1;
+    background-image: url(images/טעמי\ גלידות.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+}
+
+section:nth-of-type(1) h1 {
+    padding-top: 10%;
+    text-align: center;
+    font-family: 'Whisper';
+    font-size: 40px;
+    animation: mymove 10s infinite;
+}
+
+section:nth-of-type(1) h2 {
+    color: rgb(9, 9, 9);
+    text-align: center;
+    font-size: 110px;
+    margin-top: -2%;
+    font-family: 'cursive';
+    animation: mymove 10s infinite;
+}
+
+@keyframes mymove {
+    50% {
+        text-indent: 200px;
+    }
+}
+
+#look {
+    grid-area: look;
+    direction: rtl;
+}
+
+#look input {
+    display: block;
+    margin: auto;
+    margin-top: 3%;
+    border-radius: 15px;
+    height: 40px;
+    font-family: "Amatic SC";
+    font-weight: bold;
+    font-size: larger;
+    width: 50%;
+}
+
+.flavours {
+    grid-area: flavours;
+    width: 100%;
+}
+
+.flavours p {
+    text-align: center;
+    font-weight: bold;
+    height: 100px;
+    border-bottom: 2px solid;
+    width: 100%;
+    font-family: "Amatic SC";
+    font-size: 26px;
+    padding-top: 2.5rem;
+}
+
+.flavours div:nth-child(odd) {
+    background-color: #dbbc8b;
+    width: 100%;
+}
+
+.flavours div:nth-child(even) {
+    background-color: #f0ccaa;
+    width: 100%;
+
+}
+
+#more {
+    grid-area: more;
+}
+
+#moreIn {
+    margin-top: 30px;
+    background-color: rgb(5, 36, 24);
+    width: 150px;
+    height: 50px;
+    color: blanchedalmond;
+    font-family: 'cursive';
+    font-weight: bold;
+    display: block;
+    margin: auto;
+    margin-bottom: 2%;
+}
+
+#moreIn:hover {
+    animation: mymove3 3s infinite;
+}
+
+@keyframes mymove3 {
+    50% {
+        background-color: rgba(122, 98, 64, 0.947);
+    }
+}
+
+.picture {
+    grid-area: picture;
+}
+
+.picture img {
+    width: 70%;
+}
+
+.gallery {
+    grid-area: gallery;
+    width: 80%;
+    margin-left: 20%;
+    margin-top: 10%;
+}
+
+.gallery img {
+
+    width: 180px;
+    height: 150px;
+    border-radius: 5px;
+    border: 3px rgb(122, 104, 38) solid;
+    object-fit: cover;
+}
+
+.gallery img:hover {
+    opacity: 0.6;
+    border: 5px rgb(122, 104, 38) solid;
+}
+
+section:nth-of-type(2) {
+    grid-area: yogurts;
+    width: 80%;
+    font-size: 25px;
+    margin-top: 100px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-image: url(images/1.PNG);
+    text-align: center;
+    padding-top: 30px;
+    color: #000000;
+    font-weight: bold;
+    border-radius: 30px;
+    height: 550px;
+
+}
+
+section:nth-of-type(2) h3 {
+    font-family: 'Whisper';
+    font-size: 30px;
+
+
+}
+
+section:nth-of-type(2) h4 {
+    font-family: 'cursive';
+    font-size: 50px;
+    margin-top: -20px;
+
+
+
+}
+
+.extras {
+    grid-area: extras;
+    margin-top: 23%;
+    margin-left: 10%;
+}
+
+.extras img {
+    height: 450px;
+    width: 90%;
+}
+
+@media(max-width:768px) {
+    .container {
+        grid-template-areas:
+            'header'
+            'section1'
+            'look'
+            'flavours'
+            'more'
+            'picture'
+            'gallery'
+            'yogurts'
+            'extras'
+            'golda'
+            'footer';
+        grid-template-columns: 1fr;
+    }
+
+    section:nth-of-type(1) h2 {
+
+        animation: none;
+    }
+
+    .picture {
+        margin: auto;
+    }
+
+    .picture img {
+        display: block;
+        width: 100%;
+        height: 50%;
+    }
+
+    .gallery {
+        margin: auto;
+        margin-top: 5%;
+    }
+
+    .gallery img {
+        width: 25%;
+        margin-left: 5%;
+    }
+
+    section:nth-of-type(2) {
+        margin: 5% auto;
+    }
+
+    .extras {
+        margin-top: 5%;
+    }
+
+}
+
+@media(max-width:600px) {
+    section:nth-of-type(1) h1 {
+        margin-top: 15%;
+    }
+
+    section:nth-of-type(1) h2 {
+        font-size: 60px;
+        margin-top: 10%;
+    }
+
+    section:nth-of-type(2) {
+        height: 600px;
+    }
+
+    .extras {
+        display: none;
+    }
+
+}

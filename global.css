@@ -1,0 +1,196 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+
+}
+
+header {
+    z-index: 2;
+    grid-area: header;
+    position: fixed;
+    height: 40px;
+    width: 100%;
+    background-color: rgb(5, 58, 40);
+    top: 0;
+}
+
+#picture img {
+    position: fixed;
+    margin-left: 90%;
+    z-index: 1;
+    width: 9%;
+    height: 45px;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 90%;
+    height: 40px;
+    background-color: rgb(5, 58, 40);
+}
+
+nav ul {
+    display: flex;
+    margin-top: auto;
+    background-color: rgb(5, 58, 40);
+}
+
+nav li {
+    display: inline-block;
+    padding: 10px;
+    text-align: center;
+    flex: 1;
+}
+
+nav a {
+    display: inline-block;
+    width: 100%;
+    font-weight: bold;
+    color: blanchedalmond;
+    text-align: center;
+    text-decoration: none;
+    flex: 1;
+}
+
+a:hover {
+    color: rgb(209, 193, 138);
+}
+
+.active {
+    align-items: center;
+    border-top: 2px solid darkgoldenrod;
+}
+
+#golda {
+    grid-area: golda;
+}
+
+#golda img {
+    width: 23%;
+    margin-bottom: -3%;
+    animation: slideImage 18s infinite;
+}
+
+@keyframes slideImage {
+    0% {
+        transform: translateX(-10%);
+    }
+
+    50% {
+        transform: translateX(36%);
+    }
+
+    100% {
+        transform: translateX(-10%);
+    }
+}
+
+footer {
+    grid-area: footer;
+    background-color: rgb(5, 58, 40);
+    height: fit-content;
+    margin-top: 2%;
+    direction: rtl;
+}
+
+#footer_blocks {
+    display: flex;
+    font-size: 20px;
+    align-items: stretch;
+
+}
+
+#footer_blocks a:hover {
+    text-decoration: underline;
+}
+
+.list1 a,
+.list2 a,
+.list3 a {
+    color: #ddbb7c;
+    text-decoration: none;
+    text-align: center;
+}
+
+.list1,
+.list2,
+.list3 {
+    margin-top: 5%;
+    border-left: 2px solid;
+    color: #ddbb7c;
+    width: 25%;
+    text-align: center;
+}
+
+.list1 ul,
+.list2 ul,
+.list3 ul {
+    list-style-type: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.list4 img {
+    display: block;
+    margin: 0 auto;
+    padding-top: 38%;
+    margin-right: 7%;
+}
+
+.list5 {
+    text-align: center;
+    color: #ddbb7c;
+    margin-top: 2%;
+}
+
+@media(max-width:768px) {
+    nav {
+        width: 100%;
+    }
+
+    nav li {
+        width: 24%;
+        margin-top: 2px;
+        border-left: none;
+        margin-left: 2px;
+    }
+
+    #picture img {
+        display: none;
+        width: 32%;
+    }
+
+    #footer_blocks {
+        margin: auto;
+        width: 80%;
+    }
+
+    .list1,
+    .list2,
+    .list3 {
+        border-left: none;
+        width: 80%;
+    }
+
+    .list4 img {
+        display: none;
+    }
+
+}
+
+@media(max-width:600px) {
+
+    nav ul {
+        display: inline-block;
+    }
+
+    nav li {
+        flex: none;
+    }
+
+    #footer_blocks {
+        width: 79%;
+    }
+
+}

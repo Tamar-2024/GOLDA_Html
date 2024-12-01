@@ -1,0 +1,157 @@
+body {
+    background-color: rgb(237, 223, 203);
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-areas:
+        'header header'
+        'video video'
+        'section2 section2'
+        'pics section3'
+        'section4 section4'
+        'golda golda'
+        'footer footer';
+    grid-template-columns: 1fr 2fr;
+}
+
+section:nth-of-type(1) {
+    grid-area: video;
+    position: relative;
+    z-index: -1;
+    width: 100%;
+    background-attachment: scroll;
+}
+
+section:nth-of-type(1) video {
+    object-fit: cover;
+}
+
+section:nth-of-type(2) {
+    grid-area: section2;
+    text-align: center;
+}
+
+section:nth-of-type(2) p {
+    font-weight: bolder;
+    text-align: center;
+    color: rgb(5, 58, 40);
+    font-size: 75px;
+    background-color: rgb(210, 184, 150);
+    animation: mymove 7s;
+}
+
+@keyframes mymove {
+    50% {
+        text-indent: 200px;
+    }
+}
+
+#s1 {
+    font-family: cursive;
+}
+
+section:nth-of-type(2) div img {
+    width: 10%;
+    height: auto;
+    transition: transform 0.5s ease-in-out;
+}
+
+section:nth-of-type(2):hover div img {
+    transform: scale(1.4);
+}
+
+section:nth-of-type(3) {
+    grid-area: section3;
+    background-color: rgb(201, 171, 133);
+    font-size: 25px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    direction: rtl;
+    text-align: center;
+    margin-right: 10%;
+    margin-top: 5%;
+    padding: 2%;
+    border-radius: 30px;
+}
+
+section:nth-of-type(4) {
+    grid-area: section4;
+    font-size: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: rgba(166, 197, 187, 0.595);
+    text-align: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    margin-top: 5%;
+}
+
+section:nth-of-type(4) span {
+    color: rgb(52, 93, 67);
+    font-weight: bold;
+}
+
+#pictures {
+    grid-area: pics;
+}
+
+#pictures img {
+    z-index: 1;
+    width: 50%;
+    display: block;
+    margin: auto;
+    margin-top: 3%;
+    margin-bottom: 5%;
+    border-radius: 10%;
+    animation: slideAnimation 5s ease-in-out infinite alternate;
+}
+
+@keyframes slideAnimation {
+
+    0%,
+    100% {
+        transform: translateY(0);
+
+    }
+
+    50% {
+        transform: translateY(10%);
+    }
+}
+
+@media(max-width:768px) {
+    .container {
+        grid-template-areas:
+            'header'
+            'video'
+            'section2'
+            'section3'
+            'pics'
+            'section4'
+            'golda'
+            'footer';
+        grid-template-columns: 1fr;
+    }
+
+    .n {
+        display: none;
+    }
+
+    section:nth-of-type(2) div img {
+        width: 20%;
+    }
+
+    section:nth-of-type(3) {
+        margin-right: 0;
+    }
+}
+
+@media(max-width:600px) {
+    section:nth-of-type(3) {
+        font-size: 19px;
+    }
+
+    section:nth-of-type(4) {
+        font-size: 22px;
+    }
+}
